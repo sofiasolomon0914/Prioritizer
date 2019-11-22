@@ -52,19 +52,100 @@ activity_third = str(input("\nEnter your third activity: "))
 Third, ask the user to enter any projects, interests, or hobbies they want 
 to begin. There can only be five. Save them all as variables.
 """
-pursue_first = str(input("\nThink of interests you have wanted to pursue for "
-                         "\nsome time. This can be projects, books, classes, "
-                         "\nor hobbies you have wanted to start. You can only "
-                         "choose five.\n\nEnter your first activity: "))
-pursue_second = str(input("\nEnter you second activity: "))
-pursue_third = str(input("\nEnter your third activity: "))
-pursue_fourth = str(input("\nEnter your fourth activity: "))
-pursue_fifth = str(input("\nEnter your fifth activity: "))
-"""
-Now, ask the user to input any appointments of commitments they have for the
-upcoming week. Program will keep asking user for inputs until they type no.
-"""
+interest_first = str(input("\nThink of interests you have wanted to pursue "
+                           "for \nsome time. This can be projects, books, "
+                           "classes, \nor hobbies you have wanted to start. "
+                           "You can only choose five.\n\nEnter your first "
+                           "activity: "))
+interest_second = str(input("\nEnter you second activity: "))
+interest_third = str(input("\nEnter your third activity: "))
+interest_fourth = str(input("\nEnter your fourth activity: "))
+interest_fifth = str(input("\nEnter your fifth activity: "))
 print("\nCongratulations you finished the first part! Now it is time to "
       "\norganize your appointments and commitments. First you will be "
       "\nasked about the upcoming week, then the upcoming month, "
-      "\nand finally the upcoming year. ")
+      "\nand finally the upcoming year. This does not include your "
+      "\nwork schedule or class times, this refers to doctors "
+      "\nappointments, going out with friends, vacations, ect. Things that "
+      "\nare not part of your regular routine.")
+"""
+Now, ask the user to input any appointments of commitments they have for the
+upcoming week. Program will keep asking user for inputs until they type no. 
+Each input should be stored to a new variable.
+"""
+list_week = []
+variable_week = str(input("\nDo you have any appointments, meetings, "
+                          "\nor other commitments scheduled for this "
+                          "coming week? \nPlease answer yes or no: "))
+week_activities = True
+while week_activities:
+    if variable_week == "yes":
+        week_activity = str(input("\nEnter an appointment/commitment "
+                                  "scheduled for this week. Enter the "
+                                  "\nname of the activity followed by the "
+                                  "day and time. If no more activities "
+                                  "\nto enter, then enter no.(Example: "
+                                  "Doctor apt, Thursday, 3pm) "
+                                  "\nEnter here: "))
+        if week_activity == "no":
+            week_activities = False
+        else:
+            list_week.append(week_activity)
+    elif variable_week == "no":
+        print("Yay, you are now finished with this weeks commitments! Now "
+              "it's time to go over appointments for this coming month.")
+        week_activities = False
+list_month = []
+variable_month = str(input("\nDo you have any appointments, meetings, "
+                           "or other commitments scheduled for this coming "
+                           "month? \nThese do not include the activities "
+                           "entered in the week section. \nPlease answer yes "
+                           "or no:  "))
+month_activities = True
+while month_activities:
+    if variable_month == "yes":
+        month_activity = str(input("\nEnter an appointment/commitment "
+                                   "scheduled for this month. Enter the "
+                                   "\nname of the activity followed by the "
+                                   "day and time. If no more activities "
+                                   "\nto enter, then enter no.(Example: "
+                                   "Hawaii vacation, Mon-Fri, 6pm leave) "
+                                   "\nEnter here: "))
+        if month_activity == "no":
+            month_activities = False
+        else:
+            list_month.append(month_activity)
+    elif variable_month == "no":
+        print("Yay, you are now finished with this months commitments! \nNow "
+              "it's time to go over dates for this coming year.")
+        month_activities = False
+list_year = []
+variable_year = str(input("\nDo you have any appointments, meetings, "
+                          "\nor other commitments scheduled for this "
+                          "coming year? \nPlease answer yes or no: "))
+year_activities = True
+while year_activities:
+    if variable_year == "yes":
+        year_activity = str(input("\nEnter any commitments "
+                                  "scheduled for this year. Usually this "
+                                  "\nwill include vacation trips, reunions, "
+                                  "weddings, ect. Not holidays and stuff "
+                                  "like that.Enter the "
+                                  "\nname of the activity followed by the "
+                                  "month and day. If no more activities "
+                                  "\nto enter, then enter no.(Example: "
+                                  "Wedding, June 4) "
+                                  "\nEnter here: "))
+        if year_activity == "no":
+            year_activities = False
+        else:
+            list_year.append(year_activity)
+    elif variable_year == "no":
+        print("Congratulations!!! You have now completed all the questions! "
+              "\nBelow you can find all the information you entered. Enjoy!")
+        year_activities = False
+
+print(len(list_week))
+
+for x in list_week:
+    print(x, end=', ')
