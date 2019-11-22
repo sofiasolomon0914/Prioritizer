@@ -14,7 +14,7 @@ print("\nHello, Welcome to Prioritizer! This program will help you organize "
       "by "
       "\nrigid schedules and planners but at the same time like feeling "
       "\norganized. This program will first ask you questions concerning you "
-      "\nresponsibilities, involvements, and interests. It will then go one "
+      "\nresponsibilities, involvements, and interests. It will then go on "
       "to "
       "\nask you about upcoming appointments and commitments. Finally, "
       "\nthis program will present all the information you entered but in an "
@@ -170,8 +170,18 @@ year = str(len(list_year))
 
 activity()
 
-print("You have" + week + "activities this week")
-print(len(list_week))
-
+"""
+The following will print the information in regard to upcoming appointment
+and commitments for the week, month, and year in a user-friendly format.
+"""
+print("\nYou have " + week + " activities this week. They include:")
 for x in list_week:
+    print(x, end=', ')
+print("\n\nYou have " + month + " activities this coming month. They "
+                                "include:")
+for x in list_month:
+    print(x, end=', ')
+print("\n\nYou have " + year + " important dates this coming year. They "
+                               "include:")
+for x in list_year:
     print(x, end=', ')
