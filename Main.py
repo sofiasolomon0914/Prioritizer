@@ -42,25 +42,29 @@ Second, ask the user other activities and hobbies they engage in frequently.
 The user may only choose four activities. Store these activities as variables.
 """
 activity_first = str(input("\nThink of activities you engage in besides your "
-                           "major responsibilities. This can include "
-                           "sports/exercise, an art class, important "
-                           "hobbies, ect. Choose wisely as you can only "
-                           "submit four.\nEnter your first activity: "))
-activity_second = str(input("Enter your second activity: "))
-activity_third = str(input("Enter your third activity: "))
+                           "\nmajor responsibilities. This can include "
+                           "\nsports/exercise, an art class, important "
+                           "\nhobbies, ect. Choose wisely as you can only "
+                           "submit three.\n\nEnter your first activity: "))
+activity_second = str(input("\nEnter your second activity: "))
+activity_third = str(input("\nEnter your third activity: "))
 """
 Third, ask the user to enter any projects, interests, or hobbies they want 
-to begin. This can be infinitely many. Save them all as variables.
+to begin. There can only be five. Save them all as variables.
 """
-
-# Things that you want to pursue: can include infinite amounts (a project
-# you want to start, a book you want to read, hobbies you want to start, ect)
-
-# Small things for this coming week. May include appointments, ect.
-
-# Important dates this coming month.
-
-# Important dates this coming year
-
-
-# Output prioritize will print
+pursue_first = str(input("\nThink of interests you have wanted to pursue for "
+                         "\nsome time. This can be projects, books, classes, "
+                         "\nor hobbies you have wanted to start. You can only "
+                         "choose five.\n\nEnter your first activity: "))
+pursue_second = str(input("\nEnter you second activity: "))
+pursue_third = str(input("\nEnter your third activity: "))
+pursue_fourth = str(input("\nEnter your fourth activity: "))
+pursue_fifth = str(input("\nEnter your fifth activity: "))
+"""
+Now, ask the user to input any appointments of commitments they have for the
+upcoming week. Program will keep asking user for inputs until they type no.
+"""
+print("\nCongratulations you finished the first part! Now it is time to "
+      "\norganize your appointments and commitments. First you will be "
+      "\nasked about the upcoming week, then the upcoming month, "
+      "\nand finally the upcoming year. ")
