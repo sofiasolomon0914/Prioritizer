@@ -22,20 +22,36 @@ print("\nHello, Welcome to Prioritizer! This program will help you organize "
       "Enjoy! ")
 
 """
-First, ask the user what their major responsibilities are. The user may only 
+First, ask the user what their major responsibilities are. The user may only
 input three activities. Save these activities as variables.
 """
 responsibility_first = str(input("\nThink of your major responsibilities. "
                                  "This "
                                  "can include work, school,\nfamily "
-                                 "obligations, ect. You will only be aloud "
-                                 "to enter three, so choose wisely.\nEnter "
+                                 "obligations, ect. You will only be "
+                                 "aloud "
+                                 "to enter three, so choose "
+                                 "wisely.\n\nEnter "
                                  "your first major responsibility: "))
-responsibility_second = str(input("\nEnter a second major responsibility: "))
-responsibility_third = str(input("\nEnter your third major responsibility: "))
-
-# Things you find most interesting or relaxing or fun: may only include
-# four(can be a sport, hobbies, interest, ect)
+responsibility_second = str(input("\nEnter a second major "
+                                  "responsibility: "))
+responsibility_third = str(input("\nEnter your third major "
+                                 "responsibility: "))
+"""
+Second, ask the user other activities and hobbies they engage in frequently. 
+The user may only choose four activities. Store these activities as variables.
+"""
+activity_first = str(input("\nThink of activities you engage in besides your "
+                           "major responsibilities. This can include "
+                           "sports/exercise, an art class, important "
+                           "hobbies, ect. Choose wisely as you can only "
+                           "submit four.\nEnter your first activity: "))
+activity_second = str(input("Enter your second activity: "))
+activity_third = str(input("Enter your third activity: "))
+"""
+Third, ask the user to enter any projects, interests, or hobbies they want 
+to begin. This can be infinitely many. Save them all as variables.
+"""
 
 # Things that you want to pursue: can include infinite amounts (a project
 # you want to start, a book you want to read, hobbies you want to start, ect)
