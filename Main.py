@@ -68,6 +68,26 @@ print("\nCongratulations you finished the first part! Now it is time to "
       "\nwork schedule or class times, this refers to doctors "
       "\nappointments, going out with friends, vacations, ect. Things that "
       "\nare not part of your regular routine.")
+
+
+def activity():
+    """
+The following summarizes all the information entered by the user. It prints the
+information so the user can see it.
+    """
+    print("\nYour major responsibilities include:\n      " +
+          responsibility_first +
+          ", "
+          + responsibility_second + ", " + responsibility_third +
+          ". \nActivities that you are involved in besides your major "
+          "responsibilities include:\n      " + activity_first + ", " +
+          activity_second + ", " + activity_third +
+          ". \nInterests and activities you would like to begin or pursue "
+          "include:\n      " + interest_first + ", " + interest_second + ", "
+          + interest_third + ", " + interest_fourth + ", " + interest_fifth +
+          ".")
+
+
 """
 Now, ask the user to input any appointments of commitments they have for the
 upcoming week. Program will keep asking user for inputs until they type no. 
@@ -85,7 +105,7 @@ while week_activities:
                                   "\nname of the activity followed by the "
                                   "day and time. If no more activities "
                                   "\nto enter, then enter no.(Example: "
-                                  "Doctor apt, Thursday, 3pm) "
+                                  "Doctor apt Thursday at 3pm) "
                                   "\nEnter here: "))
         if week_activity == "no":
             week_activities = False
@@ -95,6 +115,7 @@ while week_activities:
         print("Yay, you are now finished with this weeks commitments! Now "
               "it's time to go over appointments for this coming month.")
         week_activities = False
+week = str(len(list_week))
 list_month = []
 variable_month = str(input("\nDo you have any appointments, meetings, "
                            "or other commitments scheduled for this coming "
@@ -109,7 +130,7 @@ while month_activities:
                                    "\nname of the activity followed by the "
                                    "day and time. If no more activities "
                                    "\nto enter, then enter no.(Example: "
-                                   "Hawaii vacation, Mon-Fri, 6pm leave) "
+                                   "Hawaii vacation Mon-Fri 6pm leave) "
                                    "\nEnter here: "))
         if month_activity == "no":
             month_activities = False
@@ -119,6 +140,7 @@ while month_activities:
         print("Yay, you are now finished with this months commitments! \nNow "
               "it's time to go over dates for this coming year.")
         month_activities = False
+month = str(len(list_month))
 list_year = []
 variable_year = str(input("\nDo you have any appointments, meetings, "
                           "\nor other commitments scheduled for this "
@@ -134,7 +156,7 @@ while year_activities:
                                   "\nname of the activity followed by the "
                                   "month and day. If no more activities "
                                   "\nto enter, then enter no.(Example: "
-                                  "Wedding, June 4) "
+                                  "Wedding June 4) "
                                   "\nEnter here: "))
         if year_activity == "no":
             year_activities = False
@@ -144,7 +166,11 @@ while year_activities:
         print("Congratulations!!! You have now completed all the questions! "
               "\nBelow you can find all the information you entered. Enjoy!")
         year_activities = False
+year = str(len(list_year))
 
+activity()
+
+print("You have" + week + "activities this week")
 print(len(list_week))
 
 for x in list_week:
