@@ -6,6 +6,7 @@ This program will help people prioritize their activities and interests,
 hopefully leaving them more relaxed and organized.
 
 """
+import random
 
 # Print welcome statement
 print("\nHello, Welcome to Prioritizer! This program will help you organize "
@@ -185,3 +186,18 @@ print("\n\nYou have " + year + " important dates this coming year. They "
                                "include:")
 for x in list_year:
     print(x, end=', ')
+print("\n\nGood job! Now that you have done all the hard work you can play "
+      "\na fun guessing game our programmer set up for you. If do not want "
+      "\nto go ahead and exit out of the program. ")
+n = random.randrange(1, 99)
+guess = int(input("\nEnter an integer from 1 to 99: "))
+while n != "guess":
+    if guess < n:
+        print("The guess is too low, try a higher number!")
+        guess = int(input("Enter an integer from 1 to 99: "))
+    elif guess > n:
+        print("The guess is too high, try a lower number!")
+        guess = int(input("Enter an integer from 1 to 99: "))
+    else:
+        print("Yay, you guessed it!")
+        break
